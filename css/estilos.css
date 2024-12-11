@@ -1,0 +1,247 @@
+
+ 
+ /* Cuadro de bienvenida */
+ #welcomeBox {
+    position: fixed;
+    top: 10vh;
+    left: 30vh;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(18, 19, 21, 0.867);
+    background-image: url('../img/inicio.jpg'); /* Ruta relativa de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 2em;
+    z-index: 1000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Realza la visibilidad del texto */
+    transition: opacity 1s ease, visibility 1s ease;
+    border-radius: 50px;
+}
+   /* Efecto de superposición para atenuar la imagen */
+   #welcomeBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Superposición oscura */
+    z-index: -1; /* Coloca detrás del texto */
+    border-radius: 50px;
+}
+
+/* Ocultar cuadro */
+#welcomeBox.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+/* Contenido principal */
+#mainContent {
+    display: none;
+    padding: 20px;
+    background-color: rgb(222, 225, 225);
+}
+
+#mainContent.visible {
+    display: block;
+}
+/* Contenido principal */
+.contenedor {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    background-color: rgb(222, 225, 225);
+    
+
+}
+
+.caja1{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.caja2{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.small-image {
+    width: 750px; /* Ajusta el ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Opcional: Asegura que no cause desbordamiento */
+    margin: 0 auto; /* Opcional: Centra la imagen */
+}
+img {
+    max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto;    /* Mantiene las proporciones */
+    display: block;  /* Evita el desbordamiento causado por bordes o márgenes */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+.section {
+    margin-bottom: 20px;
+}
+
+/* Estilo del menú */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    background-color: #333;
+    
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 50px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+    display: block;
+}
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Submenú (2do nivel) */
+nav ul .submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Coloca el submenú justo debajo */
+    left: 0;
+    background-color: #444;
+    padding: 0;
+    margin: 0;
+    display: none; /* Oculta el submenú por defecto */
+}
+
+nav ul .submenu li {
+    position: relative; /* Necesario para submenú de 3er nivel */
+    margin: 0;
+}
+
+nav ul .submenu li a {
+    padding: 10px 15px;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+nav ul .submenu li a:hover {
+    background-color: #666;
+}
+
+/* Submenú de 3er nivel */
+nav ul .submenu .submenu {
+    top: 0;
+    left: 100%; /* Coloca el submenú de 3er nivel a la derecha */
+    background-color: #555;
+    padding: 0;
+    margin: 0;
+}
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Botón de cierre */
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Mostrar submenús al pasar el mouse */
+nav ul li:hover > .submenu {
+    display: block; /* Muestra submenú al pasar el mouse */
+}
+
+nav ul .submenu li:hover > .submenu {
+    display: block; /* Muestra submenú de 3er nivel */
+}
+header{
+    padding: 30px;
+    color: white;
+    text-align: center;
+    background-color: #333;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+       
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia a una disposición vertical */
+        align-items: center; /* Centra los elementos */
+    }
+
+    nav ul li {
+        margin-bottom: 15px; /* Espacio entre las pestañas */
+        margin-right: 0; /* Sin margen lateral */
+    }
+}

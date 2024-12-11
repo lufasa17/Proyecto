@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Analisis y Diseño Estructurado</title>
+</head>
+
+<body>
+    <header>SISTEMA DE VENTAS</header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="marco teorico.html">Marco Teórico</a></li>
+            <li><a href="estructutrado.html">Análisis y Diseño Estructurado</a>
+                <ul class="submenu">
+                    <li><a href="Modelo Ambiental.html">Modelo Ambiental</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#" class="trigger-modal" data-modal="modal1">Declaración de
+                                    Propósito</a>
+                            </li>
+                            <li>
+                                <a href="#" class="trigger-modal" data-modal="modal2">Diagrama de
+                                    Contexto</a>
+                            </li>
+                            <li>
+                                <a href="#" class="trigger-modal" data-modal="modal3">Lista de
+                                    Acontecimientos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="Modelo Comportamiento.html">Modelo de Comportamiento</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#sub1-1" class="trigger-modal" data-modal="modal4">DFD X NIVELES</a>
+                            </li>
+                            <li>
+                                <a href="#sub1-2" class="trigger-modal" data-modal="modal5">Diagrama ER</a>
+                            </li>
+                            <li>
+                                <a href="#sub1-3" class="trigger-modal" data-modal="modal6">Diccionario de Datos</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="orientado objetos.html">Análisis y Diseño Orientado a Objetos</a>
+                <ul class="submenu">
+                    <li><a href="#" class="trigger-modal" data-modal="modal9">Diagrama de Casos de uso de Negocio </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#about">Video</a></li>
+        </ul>
+    </nav>
+    <!-- Modales -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Declaración de Propósito</h2>
+            <img src="imagen1.jpg" alt="Imagen 1">
+            <p>
+                Desarrollar un sistema de ventas que permita registrar, actualizar, eliminar, modificar a los: usuarios,
+                clientes, proveedores y productos, también realizar ventas y generar factura, facilitar la búsqueda de
+                proveedores, productos y ventas realizas.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Diagrama de Contexto</h2>
+            <img src="./img/Imagen2.jpg" alt="Imagen 2">
+            <p>Descripción sobre el Diagrama de Contexto.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Lista de Acontecimientos</h2>
+
+            <img src="imagen3.jpg" alt="Imagen 3">
+            <p>
+                <li> Registrar, modificar, consultar, actualizar y eliminar datos de clientes.</li>
+                <li> Registrar, modificar, consultar, actualizar y eliminar datos de proveedores.</li>
+                <li> Registrar, modificar, consultar, actualizar y eliminar datos de usuarios.</li>
+                <li> Registrar, modificar, consultar, actualizar y eliminar datos de productos.</li>
+                <li> Realizar ventas.</li>
+                <li> Generar reporte de ventas.</li>
+            </p>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>DFD X NIVELES</h2>
+            <img src="./img/Imagen4.jpg" alt="Imagen 4">
+            <p>Descripción sobre el DFD X NIVELES. Del sistema de Ventas</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Diagrama ER</h2>
+            <img src="./img/Imagen5.jpg" alt="Imagen 5">
+            <p>Este es el diagrama Entidad Relacion del sistema de ventas.</p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Diccionario de Datos</h2>
+            <img src="imagen6.jpg" alt="Imagen 6">
+            <h2>1. Clientes</h2>
+            <p><strong>Descripción:</strong> Información de los clientes del negocio.</p>
+            <div class="atributos">
+                <strong>Atributos:</strong>
+                <ul>
+                    <li>ID_Cliente (PK): Identificador único del cliente (Número entero).</li>
+                    <li>Nombre: Nombre completo del cliente (Texto).</li>
+                    <li>Dirección: Dirección de residencia del cliente (Texto).</li>
+                    <li>Teléfono: Número de teléfono del cliente (Texto).</li>
+                    <li>Correo: Dirección de correo electrónico del cliente (Texto).</li>
+                    <li>Estado: Estado del cliente (activo/inactivo) (Texto).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Diagrama de caso de uso de Negocio</h2>
+            <img src="./img/CUN.png" alt="CUN">
+            <p>Descripción sobre el sistema de Ventas</p>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <h1>MODELO ESTRUCTURADO</h1><br>
+        <h3>
+            <p>El modelo estructurado se divide en dos:</p>
+        </h3>
+        <div class="caja1">
+            <h2>MODELO AMBIENTAL</h2><br>
+            <ul>
+                <li>Declaracion de Proposito</li><br>
+                <li>Diagrama de Contexto</li><br>
+                <li>Lista de Acontecimientos</li><br>
+            </ul>
+            <h2>MODELO DE COMPORTAMIENTO</h2>
+            <ul>
+                <li>Diagrama de flujo de datos</li><br>
+                <li>Diagrama Entidad Relacion</li><br>
+                <li>Diccionario de Datos</li><br>
+                <li> ......</li>
+            </ul><br>
+        </div>
+        <section id="contacto" style="text-align: center; padding: 50px; background-color: #343A40; color: white;">
+            <h2>Contáctanos</h2>
+            <p>Email: fabrimiusic18@gmail.com | Teléfono: 61000613</p>
+            <p>Prueba nuestro sistema y transforma tu negocio.</p>
+        </section>
+        </main>
+
+        <footer style="background-color: #222; color: white; text-align: center; padding: 20px;">
+            <p>&copy; 2024 Sistema de Ventas. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script>
+        // Manejo de submenús
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuItems = document.querySelectorAll('nav > ul > li > a');
+            const submenus = document.querySelectorAll('.submenu');
+
+            function closeAllSubmenus() {
+                submenus.forEach(submenu => {
+                    submenu.style.display = 'none';
+                });
+            }
+
+            function openSubmenu(submenu) {
+                if (submenu) submenu.style.display = 'block';
+            }
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function (event) {
+                    const submenu = this.nextElementSibling;
+                    if (submenu && submenu.classList.contains('submenu')) {
+                        submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+                        event.stopPropagation();
+                    }
+                });
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('nav')) closeAllSubmenus();
+            });
+        });
+
+        // Manejo de modales
+        document.addEventListener("DOMContentLoaded", () => {
+            const modals = document.querySelectorAll('.modal');
+            const triggers = document.querySelectorAll('.trigger-modal');
+            const closes = document.querySelectorAll('.close');
+
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const modalId = trigger.getAttribute('data-modal');
+                    const modalToOpen = document.getElementById(modalId);
+                    if (modalToOpen) modalToOpen.style.display = 'flex';
+                });
+            });
+
+            closes.forEach(close => {
+                close.addEventListener('click', () => {
+                    const modal = close.closest('.modal');
+                    if (modal) modal.style.display = 'none';
+                });
+            });
+
+            modals.forEach(modal => {
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) modal.style.display = 'none';
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
